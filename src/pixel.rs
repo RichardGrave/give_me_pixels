@@ -32,7 +32,7 @@ impl Pixel {
     pub fn calculate_new_pixels_by_color_palette(&mut self, color_palette: &Vec<PixelRgba>) {
         // As we need the lowest distance, we will start with usize::MAX.
         // This way the first tmp_distance is always lower
-        let mut rgba_distance = usize::MAX;
+        let mut rgba_distance = isize::MAX;
 
         for rgba in color_palette {
             let tmp_distance = get_euclidean_distance(&self.original_rgba, &rgba);
@@ -48,11 +48,11 @@ impl Pixel {
     }
 }
 
-fn get_euclidean_distance(original: &PixelRgba, color_palette: &PixelRgba) -> usize {
+fn get_euclidean_distance(original: &PixelRgba, color_palette: &PixelRgba) -> isize {
     // Calculating the differences
-    let difference_r = original.pixel_r as usize - color_palette.pixel_r as usize;
-    let difference_g = original.pixel_g as usize - color_palette.pixel_g as usize;
-    let difference_b = original.pixel_b as usize - color_palette.pixel_b as usize;
+    let difference_r = (original.pixel_r as isize) - (color_palette.pixel_r as isize);
+    let difference_g = (original.pixel_g as isize) - (color_palette.pixel_g as isize);
+    let difference_b = (original.pixel_b as isize) - (color_palette.pixel_b as isize);
 
     // Use differences in the euclidean formula
     difference_r.pow(2) + difference_g.pow(2) + difference_b.pow(2)
