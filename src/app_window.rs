@@ -1,3 +1,5 @@
+// !!! We don't use this yet
+
 use iced::window;
 use iced::{executor, Application, Command, Element, Settings, Text};
 
@@ -5,7 +7,7 @@ use iced::{executor, Application, Command, Element, Settings, Text};
 //     _init_app_window()
 // }
 
-// TODO:RG remove '_' when we want to use the app window
+// TODO:RG Still need to implement a Gui
 pub fn _init_app_window() -> iced::Result {
     GiveMePixels::run(Settings {
         window: window::Settings {
