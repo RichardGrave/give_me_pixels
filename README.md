@@ -1,6 +1,9 @@
 # Give me pixels
+This is not a super serious project.\
+I just wanted to make something that I thought would be fun to do.\
+
 Recreate an image with a given color palette.\
-How to use:
+On the command-line (I use iTerm2 on the MacOS)
 
 give_me_pixels **path_to_image_file** path_to_palette_file
 
