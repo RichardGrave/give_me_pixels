@@ -1,15 +1,15 @@
 # Give me pixels
 This is not a super serious project.\
-I just wanted to make something that I thought would be fun to do.\
+I just wanted to make something that I thought would be fun to do.
 
 Recreate an image with a given color palette.\
-On the command-line (I use iTerm2 on the MacOS)
+On the command-line (I use iTerm2 on the MacOS):
 
 give_me_pixels **path_to_image_file** path_to_palette_file
 
-OR 
+OR if you want to run it with Cargo:
 
-give_me_pixels **path_to_image_file**
+cargo run **path_to_image_file** path_to_palette_file
 
 When no palette file is given then the default color palette is used.
 
