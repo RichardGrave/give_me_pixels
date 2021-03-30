@@ -32,6 +32,7 @@ fn main() {
 }
 
 fn process_image(file_path: &String, palette_name: &String) {
+    // TODO:RG later on when we are using a GUI, we need to seperate all methods for event handling
     let mut pixel_vec: Vec<Pixel> = Vec::<Pixel>::new();
     let (width, heigth) = read_image(&file_path.to_string(), &mut pixel_vec);
 
@@ -105,8 +106,8 @@ fn calculate_new_pixels(pixel_vec: &mut Vec<Pixel>, color_palette: &Vec<PixelRgb
     for pixel in pixel_vec {
         count_pixels += 1;
 
-        // Tried using Threads, but it seems to be 5 times slower.
-        // Don't know why. Maybe creating the Threads takes more time
+        // Tried using Threads, but it seems to be 2 to 3 times slower.
+        // I think this is because creating the Threads takes more time than a simple calculation per pixel
         pixel.calculate_new_pixels_by_color_palette(&color_palette);
 
         if count_pixels % one_procent == 0 {
