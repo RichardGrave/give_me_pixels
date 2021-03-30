@@ -2,14 +2,11 @@
 Recreate an image with a given color palette.\
 How to use:
 
-<span style="color:yellow">./give_me_pixels</span>
-<span style="color:green">path_to_image_file</span>
-<span style="color:orange">path_to_palette_file</span>
+give_me_pixels **path_to_image_file** path_to_palette_file
 
 OR 
 
-<span style="color:yellow">./give_me_pixels</span>
-<span style="color:green">path_to_image_file</span>
+give_me_pixels **path_to_image_file**
 
 When no palette file is given then the default color palette is used.
 
