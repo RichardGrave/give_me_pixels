@@ -179,6 +179,8 @@ fn get_new_filename(file_path: &String) -> String {
     // If something goes wrong then we have the default filename
     let mut new_filename = DEFAULT_FILENAME.to_string();
 
+    //TODO:RG totally forgot, other operating systems may have different characters in the path
+
     // Last from split should return the filename
     if let Some(full_filename) = file_path.split('/').collect::<Vec<&str>>().last() {
         // First from this split should return the filename without extension (.jpg, .png, ...)
